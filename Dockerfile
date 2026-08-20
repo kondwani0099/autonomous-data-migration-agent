@@ -1,12 +1,18 @@
-# Multi-Stage Dockerfile for Cloud Run single container deployment
+# Multi-Stage Dockerfile for Single-Container Deployment (Cloud Run)
+# Stage 1: Build Frontend React App
 FROM node:18-alpine AS frontend-builder
+
 WORKDIR /app/frontend
+
 COPY frontend/package.json frontend/package-lock.json* ./
 RUN npm ci || npm install
+
 COPY frontend/ ./
 RUN npm run build
 
+# Stage 2: Production Container with FastAPI + Embedded Frontend Assets
 FROM python:3.11-slim AS runner
+
 WORKDIR /app
 
 ENV PYTHONUNBUFFERED=1 \
@@ -21,6 +27,8 @@ COPY backend/requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY backend/app ./app
+
+# Embed compiled React SPA dist files into FastAPI static directory
 COPY --from=frontend-builder /app/frontend/dist ./app/static
 
 EXPOSE 8000
