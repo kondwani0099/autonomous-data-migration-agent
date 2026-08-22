@@ -60,7 +60,7 @@ Before initiating implementation, the agent MUST explicitly identify:
 
 ## 4. Delivery Protocol Phases
 
-1. **EXPLORE**: Use `grep_search` and `view_file` to thoroughly map code flow, signatures, and dependencies.
+1. **EXPLORE**: Use Graphify (`.copilot/skills/graphify`), `grep_search`, and `view_file` to thoroughly map code flow, signatures, and dependencies.
 2. **PLAN**: Draft an implementation plan (`docs/plans/<task-name>.md`) detailing objective, changes, risks, and acceptance criteria. Obtain approval for non-trivial tasks.
 3. **ACT**: Perform minimal, incremental changes. Follow backend/frontend conventions in `INSTRUCTIONS.md`.
 4. **VERIFY**: Run `python scripts/verify.py` and run stack-specific tests (`pytest`, `vitest`, `mypy`, `ruff`, `eslint`).
@@ -69,9 +69,10 @@ Before initiating implementation, the agent MUST explicitly identify:
 
 ---
 
-## 5. Mandatory Sub-Agent Invocation
+## 5. Mandatory Sub-Agent & Skill Invocation
 
-For specialized tasks, delegate to the appropriate sub-agent persona in `.agents/agents/`:
+For specialized tasks, delegate to the appropriate sub-agent persona in `.agents/agents/` or skills:
+- **Codebase Reading & Knowledge Graph**: `.copilot/skills/graphify` (`C:\Users\RENOCKS\Desktop\hackathons\autonomous-data-migration-agent\.copilot\skills\graphify`)
 - **Planning & Strategy**: `planner.md`
 - **Implementation**: `implementer.md`
 - **Diff & Contract Audit**: `reviewer.md`

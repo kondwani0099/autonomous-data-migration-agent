@@ -1,0 +1,527 @@
+{
+  "communities": {
+    "0": [
+      "backend_app_agents_data_cleaning",
+      "backend_app_agents_data_cleaning_datacleaningagent",
+      "backend_app_agents_data_cleaning_datacleaningagent_clean_and_normalize",
+      "backend_app_agents_data_cleaning_datacleaningagent_init",
+      "backend_app_agents_data_cleaning_py_any",
+      "backend_app_agents_data_cleaning_py_dataanomaly",
+      "backend_app_agents_data_cleaning_rationale_1",
+      "backend_app_agents_data_cleaning_rationale_13",
+      "backend_app_agents_document_understanding",
+      "backend_app_agents_document_understanding_documentunderstandingagent",
+      "backend_app_agents_document_understanding_documentunderstandingagent_init",
+      "backend_app_agents_document_understanding_documentunderstandingagent_process_document",
+      "backend_app_agents_document_understanding_py_any",
+      "backend_app_agents_document_understanding_rationale_1",
+      "backend_app_agents_document_understanding_rationale_11",
+      "backend_app_agents_init",
+      "backend_app_agents_init_rationale_1",
+      "backend_app_agents_pipeline",
+      "backend_app_agents_pipeline_migrationpipeline",
+      "backend_app_agents_pipeline_migrationpipeline_init",
+      "backend_app_agents_pipeline_migrationpipeline_run_document_job",
+      "backend_app_agents_pipeline_py_any",
+      "backend_app_agents_pipeline_rationale_1",
+      "backend_app_agents_pipeline_rationale_17",
+      "backend_app_agents_schema_mapping",
+      "backend_app_agents_schema_mapping_py_any",
+      "backend_app_agents_schema_mapping_rationale_1",
+      "backend_app_agents_schema_mapping_rationale_12",
+      "backend_app_agents_schema_mapping_schemamappingagent",
+      "backend_app_agents_schema_mapping_schemamappingagent_init",
+      "backend_app_agents_schema_mapping_schemamappingagent_map_columns",
+      "backend_app_agents_validation_import",
+      "backend_app_agents_validation_import_py_any",
+      "backend_app_agents_validation_import_py_dataanomaly",
+      "backend_app_agents_validation_import_py_datapreview",
+      "backend_app_agents_validation_import_rationale_1",
+      "backend_app_agents_validation_import_rationale_13",
+      "backend_app_agents_validation_import_rationale_24",
+      "backend_app_agents_validation_import_validationimportagent",
+      "backend_app_agents_validation_import_validationimportagent_commit_import",
+      "backend_app_agents_validation_import_validationimportagent_generate_preview",
+      "backend_app_agents_validation_import_validationimportagent_init",
+      "backend_app_models_schemas_dataanomaly"
+    ],
+    "1": [
+      "backend_app_api_clarifications",
+      "backend_app_api_clarifications_list_clarifications",
+      "backend_app_api_clarifications_py_get",
+      "backend_app_api_clarifications_py_post",
+      "backend_app_api_clarifications_rationale_1",
+      "backend_app_api_clarifications_submit_answer",
+      "backend_app_api_jobs",
+      "backend_app_api_jobs_create_job",
+      "backend_app_api_jobs_get_job",
+      "backend_app_api_jobs_list_jobs",
+      "backend_app_api_jobs_py_get",
+      "backend_app_api_jobs_py_migrationjob",
+      "backend_app_api_jobs_py_post",
+      "backend_app_api_jobs_rationale_1",
+      "backend_app_api_preview",
+      "backend_app_api_preview_approve_job_import",
+      "backend_app_api_preview_get_job_audit",
+      "backend_app_api_preview_get_job_preview",
+      "backend_app_api_preview_py_any",
+      "backend_app_api_preview_py_datapreview",
+      "backend_app_api_preview_py_get",
+      "backend_app_api_preview_py_post",
+      "backend_app_api_preview_rationale_1",
+      "backend_app_models_init",
+      "backend_app_models_init_rationale_1",
+      "backend_app_models_schemas",
+      "backend_app_models_schemas_auditlogentry",
+      "backend_app_models_schemas_clarificationanswer",
+      "backend_app_models_schemas_clarificationrequest",
+      "backend_app_models_schemas_clarificationstatus",
+      "backend_app_models_schemas_clientmapping",
+      "backend_app_models_schemas_createjobrequest",
+      "backend_app_models_schemas_datapreview",
+      "backend_app_models_schemas_documentitem",
+      "backend_app_models_schemas_documenttype",
+      "backend_app_models_schemas_jobstatus",
+      "backend_app_models_schemas_migrationjob",
+      "backend_app_models_schemas_py_basemodel",
+      "backend_app_models_schemas_rationale_1",
+      "backend_app_services_firestore",
+      "backend_app_services_firestore_rationale_1",
+      "enum",
+      "str"
+    ],
+    "2": [
+      "frontend_src_app",
+      "frontend_src_app_app",
+      "frontend_src_components_agentlog",
+      "frontend_src_components_agentlog_agentlog",
+      "frontend_src_components_agentlog_agentlogprops",
+      "frontend_src_components_audittrailviewer",
+      "frontend_src_components_audittrailviewer_audittrailviewer",
+      "frontend_src_components_audittrailviewer_audittrailviewerprops",
+      "frontend_src_components_clarificationcard",
+      "frontend_src_components_clarificationcard_clarificationcard",
+      "frontend_src_components_clarificationcard_clarificationcardprops",
+      "frontend_src_components_datapreviewtable",
+      "frontend_src_components_datapreviewtable_datapreviewtable",
+      "frontend_src_components_datapreviewtable_datapreviewtableprops",
+      "frontend_src_components_migrationprogress",
+      "frontend_src_components_migrationprogress_migrationprogress",
+      "frontend_src_components_migrationprogress_migrationprogressprops",
+      "frontend_src_components_migrationprogress_stages",
+      "frontend_src_components_uploaddropzone",
+      "frontend_src_components_uploaddropzone_uploaddropzone",
+      "frontend_src_components_uploaddropzone_uploaddropzoneprops",
+      "frontend_src_main",
+      "frontend_src_pages_clarificationcenter",
+      "frontend_src_pages_clarificationcenter_clarificationcenter",
+      "frontend_src_pages_dashboard",
+      "frontend_src_pages_dashboard_dashboard",
+      "frontend_src_pages_dashboard_dashboardprops",
+      "frontend_src_pages_migrationdetail",
+      "frontend_src_pages_migrationdetail_migrationdetail",
+      "frontend_src_pages_migrationdetail_migrationdetailprops",
+      "frontend_src_pages_newmigration",
+      "frontend_src_pages_newmigration_newmigration",
+      "frontend_src_pages_newmigration_newmigrationprops",
+      "frontend_src_services_api",
+      "frontend_src_services_api_api",
+      "frontend_src_types_index",
+      "frontend_src_types_index_auditlogentry",
+      "frontend_src_types_index_clarification",
+      "frontend_src_types_index_dataanomaly",
+      "frontend_src_types_index_datapreview",
+      "frontend_src_types_index_documentitem",
+      "frontend_src_types_index_jobstatus",
+      "frontend_src_types_index_migrationjob"
+    ],
+    "3": [
+      "autoprefixer",
+      "frontend_package",
+      "frontend_package_devdependencies",
+      "frontend_package_devdependencies_autoprefixer",
+      "frontend_package_devdependencies_postcss",
+      "frontend_package_devdependencies_tailwindcss",
+      "frontend_package_devdependencies_types_react",
+      "frontend_package_devdependencies_types_react_dom",
+      "frontend_package_devdependencies_typescript",
+      "frontend_package_devdependencies_vite",
+      "frontend_package_devdependencies_vitejs_plugin_react",
+      "frontend_package_json_tailwindcss",
+      "frontend_package_name",
+      "frontend_package_private",
+      "frontend_package_scripts",
+      "frontend_package_scripts_build",
+      "frontend_package_scripts_dev",
+      "frontend_package_scripts_lint",
+      "frontend_package_scripts_preview",
+      "frontend_package_scripts_test",
+      "frontend_package_scripts_type_check",
+      "frontend_package_type",
+      "frontend_package_version",
+      "postcss",
+      "types_react",
+      "types_react_dom",
+      "typescript",
+      "vite",
+      "vitejs_plugin_react"
+    ],
+    "4": [
+      "frontend_tsconfig",
+      "frontend_tsconfig_compileroptions",
+      "frontend_tsconfig_compileroptions_allowimportingtsextensions",
+      "frontend_tsconfig_compileroptions_isolatedmodules",
+      "frontend_tsconfig_compileroptions_jsx",
+      "frontend_tsconfig_compileroptions_lib",
+      "frontend_tsconfig_compileroptions_module",
+      "frontend_tsconfig_compileroptions_moduleresolution",
+      "frontend_tsconfig_compileroptions_noemit",
+      "frontend_tsconfig_compileroptions_nofallthroughcasesinswitch",
+      "frontend_tsconfig_compileroptions_nounusedlocals",
+      "frontend_tsconfig_compileroptions_nounusedparameters",
+      "frontend_tsconfig_compileroptions_resolvejsonmodule",
+      "frontend_tsconfig_compileroptions_skiplibcheck",
+      "frontend_tsconfig_compileroptions_strict",
+      "frontend_tsconfig_compileroptions_target",
+      "frontend_tsconfig_compileroptions_usedefineforclassfields",
+      "frontend_tsconfig_include",
+      "ref_dom",
+      "ref_dom_iterable",
+      "ref_es2020",
+      "ref_src"
+    ],
+    "5": [
+      "backend_app_api_upload",
+      "backend_app_api_upload_get_upload_url",
+      "backend_app_api_upload_py_basemodel",
+      "backend_app_api_upload_py_post",
+      "backend_app_api_upload_rationale_1",
+      "backend_app_api_upload_uploadurlrequest",
+      "backend_app_api_upload_uploadurlresponse",
+      "backend_app_services_init",
+      "backend_app_services_init_rationale_1",
+      "backend_app_services_pubsub",
+      "backend_app_services_pubsub_pubsubservice",
+      "backend_app_services_pubsub_pubsubservice_publish_event",
+      "backend_app_services_pubsub_py_any",
+      "backend_app_services_pubsub_rationale_1",
+      "backend_app_services_storage",
+      "backend_app_services_storage_rationale_1",
+      "backend_app_services_storage_storageservice",
+      "backend_app_services_storage_storageservice_generate_upload_url"
+    ],
+    "6": [
+      "backend_app_core_config",
+      "backend_app_core_config_rationale_1",
+      "backend_app_core_config_settings",
+      "backend_app_core_init",
+      "backend_app_core_init_rationale_1",
+      "backend_app_main",
+      "backend_app_main_health_check",
+      "backend_app_main_py_get",
+      "backend_app_main_rationale_1",
+      "backend_app_main_root",
+      "backend_app_main_serve_spa",
+      "backend_tests_test_health",
+      "backend_tests_test_health_rationale_1",
+      "backend_tests_test_health_test_health_endpoint",
+      "backend_tests_test_health_test_root_endpoint",
+      "basesettings",
+      "fileresponse"
+    ],
+    "7": [
+      "backend_app_services_firestore_firestoreservice",
+      "backend_app_services_firestore_firestoreservice_add_audit_entry",
+      "backend_app_services_firestore_firestoreservice_add_clarification",
+      "backend_app_services_firestore_firestoreservice_add_document",
+      "backend_app_services_firestore_firestoreservice_create_job",
+      "backend_app_services_firestore_firestoreservice_get_audit_trail",
+      "backend_app_services_firestore_firestoreservice_get_job",
+      "backend_app_services_firestore_firestoreservice_init",
+      "backend_app_services_firestore_firestoreservice_list_clarifications",
+      "backend_app_services_firestore_firestoreservice_list_documents",
+      "backend_app_services_firestore_firestoreservice_list_jobs",
+      "backend_app_services_firestore_firestoreservice_update_job_status",
+      "backend_app_services_firestore_py_any",
+      "backend_app_services_firestore_py_migrationjob",
+      "documentitem",
+      "jobstatus"
+    ],
+    "8": [
+      "axios",
+      "clsx",
+      "frontend_package_dependencies",
+      "frontend_package_dependencies_axios",
+      "frontend_package_dependencies_clsx",
+      "frontend_package_dependencies_lucide_react",
+      "frontend_package_dependencies_react",
+      "frontend_package_dependencies_react_dom",
+      "frontend_package_dependencies_tailwind_merge",
+      "lucide_react",
+      "react",
+      "react_dom",
+      "tailwind_merge"
+    ],
+    "9": [
+      "backend_app_api_clients",
+      "backend_app_api_clients_clientitem",
+      "backend_app_api_clients_get_client_mappings",
+      "backend_app_api_clients_list_clients",
+      "backend_app_api_clients_py_any",
+      "backend_app_api_clients_py_basemodel",
+      "backend_app_api_clients_py_get",
+      "backend_app_api_clients_rationale_1",
+      "backend_app_api_init",
+      "backend_app_api_router",
+      "backend_app_api_router_rationale_1"
+    ],
+    "10": [
+      "scripts_validate",
+      "scripts_validate_fail",
+      "scripts_validate_load_json",
+      "scripts_validate_main",
+      "scripts_validate_validate_compatibility",
+      "scripts_validate_validate_instruction_budget",
+      "scripts_validate_validate_manifest",
+      "scripts_validate_validate_markdown_metadata",
+      "scripts_validate_validate_mcp",
+      "scripts_validate_validate_settings",
+      "scripts_validate_validate_version"
+    ],
+    "11": [
+      "vercel",
+      "vercel_backend_entrypoint",
+      "vercel_backend_root",
+      "vercel_frontend_framework",
+      "vercel_frontend_root",
+      "vercel_rewrites",
+      "vercel_services",
+      "vercel_services_backend",
+      "vercel_services_frontend"
+    ],
+    "12": [
+      "path",
+      "scripts_verify",
+      "scripts_verify_check_backend",
+      "scripts_verify_check_frontend",
+      "scripts_verify_check_security",
+      "scripts_verify_main",
+      "scripts_verify_rationale_25",
+      "scripts_verify_run_command"
+    ],
+    "13": [
+      "scripts_generate_report",
+      "scripts_generate_report_generate_report",
+      "scripts_generate_report_main"
+    ],
+    "14": [
+      "scripts_project_analyzer",
+      "scripts_project_analyzer_analyze_project",
+      "scripts_project_analyzer_main"
+    ],
+    "15": [
+      "scripts_security_check",
+      "scripts_security_check_main",
+      "scripts_security_check_scan_secrets"
+    ],
+    "16": [
+      "backend_app_init",
+      "backend_app_init_rationale_1"
+    ],
+    "17": [
+      "backend_tests_init",
+      "backend_tests_init_rationale_1"
+    ],
+    "18": [
+      "install_sh__entry",
+      "install_sh_install"
+    ],
+    "19": [
+      "frontend_postcss_config"
+    ],
+    "20": [
+      "frontend_tailwind_config"
+    ],
+    "21": [
+      "frontend_vite_config"
+    ],
+    "22": [
+      "install_ps1_install"
+    ],
+    "23": [
+      "tailwindcss_tailwindcss"
+    ]
+  },
+  "cohesion": {
+    "0": 0.07419712070874862,
+    "1": 0.10299003322259136,
+    "2": 0.08859357696567,
+    "3": 0.06896551724137931,
+    "4": 0.09090909090909091,
+    "5": 0.1437908496732026,
+    "6": 0.1323529411764706,
+    "7": 0.16666666666666666,
+    "8": 0.15384615384615385,
+    "9": 0.21818181818181817,
+    "10": 0.5454545454545454,
+    "11": 0.2222222222222222,
+    "12": 0.4642857142857143,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0
+  },
+  "gods": [
+    {
+      "id": "backend_app_services_firestore_firestoreservice",
+      "label": "FirestoreService",
+      "degree": 17
+    },
+    {
+      "id": "frontend_tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 16
+    },
+    {
+      "id": "backend_app_agents_validation_import_validationimportagent",
+      "label": "ValidationImportAgent",
+      "degree": 10
+    },
+    {
+      "id": "backend_app_models_schemas_jobstatus",
+      "label": "JobStatus",
+      "degree": 10
+    },
+    {
+      "id": "backend_app_models_schemas_clarificationrequest",
+      "label": "ClarificationRequest",
+      "degree": 9
+    },
+    {
+      "id": "backend_app_models_schemas_migrationjob",
+      "label": "MigrationJob",
+      "degree": 9
+    },
+    {
+      "id": "scripts_validate_fail",
+      "label": "fail()",
+      "degree": 9
+    },
+    {
+      "id": "scripts_validate_main",
+      "label": "main()",
+      "degree": 9
+    },
+    {
+      "id": "backend_app_agents_data_cleaning_datacleaningagent",
+      "label": "DataCleaningAgent",
+      "degree": 8
+    },
+    {
+      "id": "backend_app_agents_document_understanding_documentunderstandingagent",
+      "label": "DocumentUnderstandingAgent",
+      "degree": 8
+    }
+  ],
+  "surprises": [
+    {
+      "source": "DocumentUnderstandingAgent",
+      "target": "DocumentType",
+      "source_files": [
+        "backend/app/agents/document_understanding.py",
+        "backend/app/models/schemas.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "ValidationImportAgent",
+      "target": "DataPreview",
+      "source_files": [
+        "backend/app/agents/validation_import.py",
+        "backend/app/models/schemas.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "FirestoreService",
+      "target": "ClarificationRequest",
+      "source_files": [
+        "backend/app/services/firestore.py",
+        "backend/app/models/schemas.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "FirestoreService",
+      "target": "DocumentItem",
+      "source_files": [
+        "backend/app/services/firestore.py",
+        "backend/app/models/schemas.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "FirestoreService",
+      "target": "JobStatus",
+      "source_files": [
+        "backend/app/services/firestore.py",
+        "backend/app/models/schemas.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `FirestoreService` connect `FirestoreService` to `schemas.py`, `services/__init__.py`?",
+      "why": "High betweenness centrality (0.043) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `ValidationImportAgent` connect `agents/__init__.py` to `schemas.py`?",
+      "why": "High betweenness centrality (0.035) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `DataPreview` connect `schemas.py` to `agents/__init__.py`?",
+      "why": "High betweenness centrality (0.026) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 4 inferred relationships involving `FirestoreService` (e.g. with `ClarificationRequest` and `DocumentItem`) actually correct?",
+      "why": "`FirestoreService` has 4 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 3 inferred relationships involving `ValidationImportAgent` (e.g. with `MigrationPipeline` and `DataAnomaly`) actually correct?",
+      "why": "`ValidationImportAgent` has 3 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 3 inferred relationships involving `JobStatus` (e.g. with `create_job()` and `approve_job_import()`) actually correct?",
+      "why": "`JobStatus` has 3 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 2 inferred relationships involving `ClarificationRequest` (e.g. with `list_clarifications()` and `FirestoreService`) actually correct?",
+      "why": "`ClarificationRequest` has 2 INFERRED edges - model-reasoned connections that need verification."
+    }
+  ]
+}
