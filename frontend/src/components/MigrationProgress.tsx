@@ -35,8 +35,8 @@ export const MigrationProgress: React.FC<MigrationProgressProps> = ({ status }) 
   return (
     <div className="w-full glass-card p-6">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-sm font-semibold text-slate-300">Agent Swarm Pipeline Progress</h3>
-        <span className="text-xs font-mono px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+        <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300">Agent Swarm Pipeline Progress</h3>
+        <span className="text-xs font-mono px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
           Status: {status.toUpperCase()}
         </span>
       </div>
@@ -51,23 +51,23 @@ export const MigrationProgress: React.FC<MigrationProgressProps> = ({ status }) 
               key={stage.id}
               className={`p-3 rounded-xl border transition-all duration-300 flex flex-col items-center justify-center text-center ${
                 isDone
-                  ? 'bg-emerald-950/20 border-emerald-500/30 text-emerald-300'
+                  ? 'bg-emerald-50 dark:bg-emerald-950/20 border-emerald-300 dark:border-emerald-500/30 text-emerald-600 dark:text-emerald-300'
                   : isCurrent
-                  ? 'bg-indigo-950/40 border-indigo-500/50 text-indigo-200 ring-2 ring-indigo-500/20'
-                  : 'bg-slate-900/40 border-slate-800/80 text-slate-500'
+                  ? 'bg-indigo-50 dark:bg-indigo-950/40 border-indigo-400 dark:border-indigo-500/50 text-indigo-600 dark:text-indigo-200 ring-2 ring-indigo-500/20'
+                  : 'bg-slate-50 dark:bg-slate-900/40 border-slate-200 dark:border-slate-800/80 text-slate-400 dark:text-slate-500'
               }`}
             >
               <div className="mb-2">
                 {isDone ? (
-                  <CheckCircle2 className="w-5 h-5 text-emerald-400" />
+                  <CheckCircle2 className="w-5 h-5 text-emerald-500 dark:text-emerald-400" />
                 ) : isCurrent ? (
                   status === 'clarifying' ? (
-                    <HelpCircle className="w-5 h-5 text-amber-400 animate-pulse" />
+                    <HelpCircle className="w-5 h-5 text-amber-500 dark:text-amber-400 animate-pulse" />
                   ) : (
-                    <Loader2 className="w-5 h-5 text-indigo-400 animate-spin" />
+                    <Loader2 className="w-5 h-5 text-indigo-500 dark:text-indigo-400 animate-spin" />
                   )
                 ) : (
-                  <Clock className="w-5 h-5 text-slate-600" />
+                  <Clock className="w-5 h-5 text-slate-400 dark:text-slate-600" />
                 )}
               </div>
               <span className="text-xs font-medium">{stage.label}</span>

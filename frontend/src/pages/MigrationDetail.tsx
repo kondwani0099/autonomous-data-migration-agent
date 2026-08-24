@@ -35,18 +35,18 @@ export const MigrationDetail: React.FC<MigrationDetailProps> = ({ jobId, onNavig
   };
 
   if (!job) {
-    return <div className="text-center text-xs text-slate-500 py-12">Loading job details...</div>;
+    return <div className="text-center text-xs text-slate-400 dark:text-slate-500 py-12">Loading job details...</div>;
   }
 
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <button onClick={() => onNavigate('dashboard')} className="text-xs text-slate-400 hover:text-slate-200 mb-2">
+          <button onClick={() => onNavigate('dashboard')} className="text-xs text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 mb-2">
             &larr; Back to Dashboard
           </button>
-          <h1 className="text-2xl font-bold text-slate-100">{job.client_name}</h1>
-          <p className="text-xs text-slate-400 font-mono">Job ID: {job.job_id}</p>
+          <h1 className="text-2xl font-bold text-slate-800 dark:text-slate-100">{job.client_name}</h1>
+          <p className="text-xs text-slate-500 dark:text-slate-400 font-mono">Job ID: {job.job_id}</p>
         </div>
       </div>
 
@@ -54,7 +54,7 @@ export const MigrationDetail: React.FC<MigrationDetailProps> = ({ jobId, onNavig
 
       {clarifications.length > 0 && (
         <div className="space-y-4">
-          <h3 className="text-sm font-semibold text-amber-400 uppercase tracking-wider">
+          <h3 className="text-sm font-semibold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
             Pending Agent Questions ({clarifications.length})
           </h3>
           {clarifications.map((clar) => (

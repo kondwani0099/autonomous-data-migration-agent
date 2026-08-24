@@ -21,17 +21,17 @@ export const ClarificationCard: React.FC<ClarificationCardProps> = ({
   };
 
   return (
-    <div className="glass-card p-6 border-amber-500/30 bg-gradient-to-b from-amber-950/20 to-slate-900/60">
+    <div className="glass-card p-6 border-amber-500/30 bg-gradient-to-b from-amber-50 to-white dark:from-amber-950/20 dark:to-slate-900/60">
       <div className="flex items-start space-x-3 mb-4">
-        <div className="p-2 rounded-lg bg-amber-500/10 text-amber-400 mt-1">
+        <div className="p-2 rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400 mt-1">
           <HelpCircle className="w-6 h-6" />
         </div>
         <div>
-          <span className="text-xs font-semibold text-amber-400 uppercase tracking-wider">
+          <span className="text-xs font-semibold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
             Agent Clarification Required ({clarification.agent})
           </span>
-          <h4 className="text-base font-medium text-slate-100 mt-1">{clarification.question}</h4>
-          <p className="text-xs text-slate-400 mt-1">{clarification.context}</p>
+          <h4 className="text-base font-medium text-slate-800 dark:text-slate-100 mt-1">{clarification.question}</h4>
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">{clarification.context}</p>
         </div>
       </div>
 
@@ -42,8 +42,8 @@ export const ClarificationCard: React.FC<ClarificationCardProps> = ({
               key={idx}
               className={`flex items-center justify-between p-3 rounded-xl border cursor-pointer transition-all duration-200 ${
                 selectedOption === option
-                  ? 'bg-amber-500/10 border-amber-500/50 text-amber-200'
-                  : 'bg-slate-900/40 border-slate-800 text-slate-300 hover:border-slate-700'
+                  ? 'bg-amber-500/10 border-amber-500/50 text-amber-600 dark:text-amber-200'
+                  : 'bg-slate-50 dark:bg-slate-900/40 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:border-slate-300 dark:hover:border-slate-700'
               }`}
             >
               <span className="text-xs font-medium">{option}</span>
@@ -53,7 +53,7 @@ export const ClarificationCard: React.FC<ClarificationCardProps> = ({
                 value={option}
                 checked={selectedOption === option}
                 onChange={() => setSelectedOption(option)}
-                className="text-amber-500 focus:ring-amber-500 bg-slate-950 border-slate-700"
+                className="text-amber-500 focus:ring-amber-500 bg-white dark:bg-slate-950 border-slate-300 dark:border-slate-700"
               />
             </label>
           ))}
