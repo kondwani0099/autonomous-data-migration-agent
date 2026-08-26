@@ -13,10 +13,15 @@ class ValidationImportAgent:
         self.adk_agent: LlmAgent = build_validation_import_agent()
 
     async def generate_preview(
-        self, job_id: str, clean_records: List[Dict[str, Any]], anomalies: List[DataAnomaly]
+        self,
+        job_id: str,
+        clean_records: List[Dict[str, Any]],
+        anomalies: List[DataAnomaly],
+        target_schema: Dict[str, Any] | None = None,
+        mappings: List[Dict[str, Any]] | None = None,
     ) -> DataPreview:
         """Generate dry-run preview before human approval."""
-        result = generate_dry_run_preview(job_id, clean_records, anomalies)
+        result = generate_dry_run_preview(job_id, clean_records, anomalies, target_schema, mappings)
         return DataPreview(**result)
 
     async def commit_import(self, job_id: str, clean_records: List[Dict[str, Any]]) -> int:

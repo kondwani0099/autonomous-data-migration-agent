@@ -58,15 +58,20 @@ class MigrationPipeline:
         return final_text
 
     async def run_document_job(
-        self, job_id: str, client_id: str, file_path: str, file_type: str
+        self,
+        job_id: str,
+        client_id: str,
+        file_path: str,
+        file_type: str,
+        data_category: str = "sales",
     ) -> Dict[str, Any]:
         """Execute full sequential pipeline for a single document."""
         doc_result = await self.doc_agent.process_document(file_path, file_type)
         mappings, clarifications = await self.schema_agent.map_columns(
-            client_id, doc_result["detected_columns"]
+            client_id, doc_result["detected_columns"], data_category
         )
         clean_records, anomalies = await self.cleaning_agent.clean_and_normalize(
-            doc_result["raw_records"], mappings
+            doc_result["raw_records"], mappings, data_category
         )
         preview = await self.validation_agent.generate_preview(
             job_id, clean_records, anomalies

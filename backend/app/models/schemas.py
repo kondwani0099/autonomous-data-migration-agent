@@ -26,6 +26,18 @@ class DocumentType(str, Enum):
     INVOICE = "INVOICE"
     UNKNOWN = "UNKNOWN"
 
+
+class DataCategory(str, Enum):
+    """Target ERP data format the migration agents will normalize records into."""
+
+    SALES = "sales"
+    EXPENSES = "expenses"
+    PAYROLL = "payroll"
+    INVOICES = "invoices"
+    PURCHASES = "purchases"
+    OTHER = "other"
+
+
 class ClarificationStatus(str, Enum):
     PENDING = "pending"
     ANSWERED = "answered"
@@ -35,6 +47,7 @@ class CreateJobRequest(BaseModel):
     client_id: str
     client_name: str
     description: Optional[str] = None
+    data_category: DataCategory = DataCategory.SALES
 
 class DocumentItem(BaseModel):
     document_id: str
@@ -53,6 +66,7 @@ class MigrationJob(BaseModel):
     client_id: str
     client_name: str
     status: JobStatus = JobStatus.UPLOADING
+    data_category: DataCategory = DataCategory.SALES
     total_documents: int = 0
     processed_documents: int = 0
     total_records_detected: int = 0
@@ -99,6 +113,19 @@ class DataPreview(BaseModel):
     anomalies: List[DataAnomaly] = Field(default_factory=list)
     sample_records: List[Dict[str, Any]] = Field(default_factory=list)
     audit_trail: List[AuditLogEntry] = Field(default_factory=list)
+    target_schema: Optional[Dict[str, Any]] = Field(
+        default_factory=lambda: {"label": "Sales", "columns": []}
+    )
+    # Full editable record set (Excel-like editing in the frontend)
+    records: List[Dict[str, Any]] = Field(default_factory=list)
+    # Per-document column mappings produced by the SchemaMappingAgent
+    mappings: List[Dict[str, Any]] = Field(default_factory=list)
+
+
+class EditableRecordsRequest(BaseModel):
+    """Payload for saving user-edited records back to a job preview."""
+
+    records: List[Dict[str, Any]] = Field(default_factory=list)
 
 class ClientMapping(BaseModel):
     client_id: str

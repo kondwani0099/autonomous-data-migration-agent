@@ -9,11 +9,27 @@ export type JobStatus =
   | 'completed'
   | 'failed';
 
+export type DataCategory =
+  | 'sales'
+  | 'expenses'
+  | 'payroll'
+  | 'invoices'
+  | 'purchases'
+  | 'other';
+
+export interface DataCategoryOption {
+  value: DataCategory;
+  label: string;
+  columns: string[];
+  description: string;
+}
+
 export interface MigrationJob {
   job_id: string;
   client_id: string;
   client_name: string;
   status: JobStatus;
+  data_category: DataCategory;
   total_documents: number;
   processed_documents: number;
   total_records_detected: number;
@@ -67,6 +83,12 @@ export interface AuditLogEntry {
   after?: unknown;
 }
 
+export interface MappingEntry {
+  document_id: string;
+  file_name: string;
+  mappings: Record<string, string>;
+}
+
 export interface DataPreview {
   job_id: string;
   total_records: number;
@@ -74,4 +96,10 @@ export interface DataPreview {
   anomalies: DataAnomaly[];
   sample_records: Record<string, unknown>[];
   audit_trail: AuditLogEntry[];
+  target_schema?: {
+    label: string;
+    columns: string[];
+  };
+  records?: Record<string, unknown>[];
+  mappings?: MappingEntry[];
 }

@@ -3,8 +3,7 @@ import { ThemeToggle } from './components/ThemeToggle';
 import { Dashboard } from './pages/Dashboard';
 import { NewMigration } from './pages/NewMigration';
 import { MigrationDetail } from './pages/MigrationDetail';
-import { ClarificationCenter } from './pages/ClarificationCenter';
-import { Database, LayoutDashboard, PlusCircle, HelpCircle } from 'lucide-react';
+import { Database, LayoutDashboard, PlusCircle } from 'lucide-react';
 
 export function App() {
   const [currentPage, setCurrentPage] = useState<string>('dashboard');
@@ -59,18 +58,6 @@ export function App() {
               <PlusCircle className="w-4 h-4" />
               <span className="hidden sm:inline">New Job</span>
             </button>
-
-            <button
-              onClick={() => navigate('clarification')}
-              className={`flex items-center space-x-2 px-3 py-2 rounded-xl text-xs font-medium transition-all ${
-                currentPage === 'clarification'
-                  ? 'bg-indigo-600/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20'
-                  : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-900/40'
-              }`}
-            >
-              <HelpCircle className="w-4 h-4" />
-              <span className="hidden sm:inline">Clarification Center</span>
-            </button>
           </nav>
         </div>
       </header>
@@ -80,7 +67,6 @@ export function App() {
         {currentPage === 'dashboard' && <Dashboard onNavigate={navigate} />}
         {currentPage === 'new' && <NewMigration onNavigate={navigate} />}
         {currentPage === 'detail' && <MigrationDetail jobId={selectedJobId} onNavigate={navigate} />}
-        {currentPage === 'clarification' && <ClarificationCenter />}
       </main>
 
       {/* Footer */}

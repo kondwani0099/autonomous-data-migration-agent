@@ -3,7 +3,7 @@
 import uuid
 from typing import List
 from fastapi import APIRouter, HTTPException
-from app.models.schemas import MigrationJob, CreateJobRequest, JobStatus
+from app.models.schemas import MigrationJob, CreateJobRequest, DocumentItem, JobStatus
 from app.services.firestore import firestore_service
 
 router = APIRouter()
@@ -15,6 +15,7 @@ async def create_job(payload: CreateJobRequest) -> MigrationJob:
         job_id=job_id,
         client_id=payload.client_id,
         client_name=payload.client_name,
+        data_category=payload.data_category,
         status=JobStatus.UPLOADING,
     )
     return await firestore_service.create_job(job)
@@ -29,3 +30,11 @@ async def get_job(job_id: str) -> MigrationJob:
     if not job:
         raise HTTPException(status_code=404, detail="Job not found")
     return job
+
+@router.get("/{job_id}/documents", response_model=List[DocumentItem])
+async def list_job_documents(job_id: str) -> List[DocumentItem]:
+    """List all uploaded documents (with per-file processing status) for a job."""
+    job = await firestore_service.get_job(job_id)
+    if not job:
+        raise HTTPException(status_code=404, detail="Job not found")
+    return await firestore_service.list_documents(job_id)

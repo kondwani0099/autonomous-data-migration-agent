@@ -13,10 +13,10 @@ class DataCleaningAgent:
         self.adk_agent: LlmAgent = build_data_cleaning_agent()
 
     async def clean_and_normalize(
-        self, raw_records: List[Dict[str, Any]], column_mappings: Dict[str, str]
+        self, raw_records: List[Dict[str, Any]], column_mappings: Dict[str, str], data_category: str = "sales"
     ) -> Tuple[List[Dict[str, Any]], List[DataAnomaly]]:
         """Normalize values, standardize dates, group product variants, flag anomalies."""
-        result = clean_and_normalize_records(raw_records, column_mappings)
+        result = clean_and_normalize_records(raw_records, column_mappings, data_category)
         anomalies = [
             DataAnomaly(**a) if isinstance(a, dict) else a
             for a in result["anomalies"]
